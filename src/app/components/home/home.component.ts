@@ -10,19 +10,22 @@ import { SpotifyService } from '../../services/spotify.service';
 export class HomeComponent implements OnInit {
 
 
-  countries: any[] = [];
+  // countries: any[] = [];
+  playlist: any[] = [];
 
-  
   constructor(private http: HttpClient, private spotify: SpotifyService) {
-
-    console.log("Constructor done");
-    this.http.get('https://restcountries.eu/rest/v2/lang/es')
-      .subscribe((data: any) => {
-        this.countries = data;
-        console.log(data);
-
-      });
-
+    // console.log("Constructor done");
+    // this.http.get('https://restcountries.eu/rest/v2/lang/es')
+    //   .subscribe((data: any) => {
+    //     this.countries = data;
+    //     console.log(data);
+    //   });
+    this.spotify.getNewPlaylist()
+      .subscribe((data:any) => {
+        
+        console.log(data.playlists.items);
+        this.playlist = data.playlists.items;
+      })
   }
 
   ngOnInit() {

@@ -1,7 +1,8 @@
-<ul>
-  <li *ngFor="let p of countries">
-    {{ p.name }}
-    <img src='{{ p.flag }}' alt="" width="40" height="20" srcset="">
-  </li>
-
-</ul>
+<div class="card-columns">
+  <div *ngFor="let playlists of playlist" class="card">
+    <img class="card-img-top" [src]="playlists.images[0].url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{playlists.name}}</h5>
+    </div>
+  </div>
+</div>
