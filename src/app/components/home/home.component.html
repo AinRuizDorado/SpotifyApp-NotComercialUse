@@ -1,3 +1,7 @@
-<p>
-  home works!
-</p>
+<ul>
+  <li *ngFor="let p of countries">
+    {{ p.name }}
+    <img src='{{ p.flag }}' alt="" width="40" height="20" srcset="">
+  </li>
+
+</ul>
