@@ -3,7 +3,7 @@
 SpotiApp
 
 
-This Proyect is for educational and experimental coding, there will be tecnologies like Angular Typescript, and manage flow of the SpotifyApi
+This Project is for educational and experimental coding, there will be tecnologies like Angular Typescript, and manage flow of the SpotifyApi
 
 
 ## Development server
