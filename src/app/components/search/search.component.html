@@ -1,5 +1,28 @@
 <div class="row">
   <div class="col">
-    <input #query type="text" (keyup)="buscar(query.value)" class="" placeholder="Search Any Artist">
+    <input #query type="text" (keyup)="buscar(query.value)" class="form-control" placeholder="Search Any Artist">
   </div>
 </div>
+
+
+<div class="card-columns">
+  
+  <div *ngFor="let artist of artists" class="card bg-dark">
+      
+    <img class="card-img-top" [src]="artist.images[0].url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{artist.name}}</h5>
+    </div>
+  </div>
+</div>
+<!-- 
+<div class="card-columns">
+  
+    <div *ngFor="let artist of artists" class="card bg-dark">
+        <h2>Playlist: </h2>
+      <img class="card-img-top" [src]="artist.images[0].url" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{artist.name}}</h5>
+      </div>
+    </div>
+  </div> -->
