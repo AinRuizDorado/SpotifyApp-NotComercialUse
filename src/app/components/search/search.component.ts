@@ -8,7 +8,7 @@ import { SpotifyService } from '../../services/spotify.service';
 })
 export class SearchComponent {
   artists: any[] = [];
-
+  tracks: any[] = [];
 
 
   constructor(private spotify : SpotifyService) {
@@ -20,6 +20,11 @@ export class SearchComponent {
     .subscribe((data:any) => {
       console.log(data.artists.items);
       this.artists = data.artists.items;
+    });
+    this.spotify.getSearchTrack(query)
+    .subscribe((dataq:any) => {
+      console.log(dataq.tracks.items);
+      this.tracks = dataq.tracks.items;
     })
   }
 

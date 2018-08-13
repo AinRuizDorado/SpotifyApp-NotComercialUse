@@ -6,23 +6,22 @@
 
 
 <div class="card-columns">
-  
-  <div *ngFor="let artist of artists" class="card bg-dark">
-      
+  <div *ngFor="let artist of artists" class="card">
+      <p>Principal Artist</p>
     <img class="card-img-top" [src]="artist.images[0].url" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{artist.name}}</h5>
     </div>
   </div>
 </div>
-<!-- 
-<div class="card-columns">
-  
-    <div *ngFor="let artist of artists" class="card bg-dark">
-        <h2>Playlist: </h2>
-      <img class="card-img-top" [src]="artist.images[0].url" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{artist.name}}</h5>
-      </div>
+
+<div class="card-columns minsize">
+  <!-- <p>Principal Album Result</p> -->
+  <div *ngFor="let track of tracks" class="card bg-dark">
+
+    <img class="card-img-top" [src]="track.album.images[0].url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{track.name}}</h5>
     </div>
-  </div> -->
+  </div>
+</div>
