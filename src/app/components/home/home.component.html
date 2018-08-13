@@ -2,6 +2,7 @@
   <div *ngFor="let playlists of playlist" class="card">
     <img class="card-img-top" [src]="playlists.images[0].url" alt="Card image cap">
     <div class="card-body">
+      <a href="{{playlists.external_urls.spotify}}">IR A LA PLAYLIST</a>
       <h5 class="card-title">{{playlists.name}}</h5>
     </div>
   </div>

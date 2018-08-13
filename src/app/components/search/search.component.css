@@ -1,6 +1,8 @@
 p {
     font-size: 25px;
 }
-.minsize{
-    /* width: 15%; */
+.card-title{
+    font-size: 25px;
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -5,20 +5,22 @@
 </div>
 
 
-<div class="card-columns">
-  <div *ngFor="let artist of artists" class="card">
-      <p>Principal Artist</p>
+<div class="card-columns m-5">
+  <div *ngFor="let artist of artists" class="card" ng-model="showartist" ng-init="showartist=false">
+      <div ng-if="showartist" class="card-title">Artista Principal</div>
     <img class="card-img-top" [src]="artist.images[0].url" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{artist.name}}</h5>
     </div>
   </div>
 </div>
+<div>
 
-<div class="card-columns minsize">
+</div>
+<div class="card-columns minsize m-5">
   <!-- <p>Principal Album Result</p> -->
-  <div *ngFor="let track of tracks" class="card bg-dark">
-
+  <div *ngFor="let track of tracks" class="card" ng-model="showtrack" ng-init="showtrack=false">
+    <div ng-if="showtrack" class="card-title">Relacionados con el artista</div>
     <img class="card-img-top" [src]="track.album.images[0].url" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{track.name}}</h5>
